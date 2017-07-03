@@ -19,7 +19,8 @@ $(document).ready(function() {
 			data.query.search.forEach(function(article) {
 				var title = article.title;
 				var url = "https://en.wikipedia.org/wiki/" + title;
-				$(".searchOutput").append("<div><a href='" + url + "' target='_blank'>" + title + "</a></div>");	
+				var snippet = article.snippet;
+				$(".searchOutput").append("<a href='" + url + "' target='_blank'><div class='article'><h2>" + title + "</h2>" + snippet + "</div></a>");	
 			});
 		});	
 	});

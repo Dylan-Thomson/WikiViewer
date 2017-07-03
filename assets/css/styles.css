@@ -3,8 +3,13 @@ body {
 	color: white;
 }
 
-a, a:hover {
+a, a:hover, a:active {
 	color: white;
+	text-decoration: none;
+}
+
+a:hover .article{
+	border-left: 5px solid #FFAD08;
 }
 
 .flex-container {
@@ -24,4 +29,17 @@ a, a:hover {
 .input-group {
 	width: 25%;
 	margin: 1em auto;
+}
+
+.article {
+	border-left: 5px solid transparent;
+	background: rgba(55,55,55,.5);
+	margin: 1em auto;
+	text-align: left;
+	padding: 15px 25px;
+}
+
+.searchOutput {
+	width: 60%;
+	margin: auto;
 }
