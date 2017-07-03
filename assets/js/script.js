@@ -1,6 +1,8 @@
 $(document).ready(function() {
-	$(".btn").on("click", function() {
-		var searchTerm = $("input").val();
+	$("form:first").submit(function(event) {
+		event.preventDefault();
+		var searchTerm = $("input:first").val();
+		console.log("searched for:", searchTerm);
 		$.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + searchTerm + "&callback=?", function(data) {
 			console.log(data.query.search);
 			$(".searchOutput").html("");
@@ -10,5 +12,6 @@ $(document).ready(function() {
 				$(".searchOutput").append("<div><a href='" + url + "' target='_blank'>" + title + "</a></div>");	
 			});
 		});
+		
 	});
 });
