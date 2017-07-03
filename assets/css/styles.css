@@ -1,3 +1,27 @@
 body {
-	background: #34fa52;
+	background: #2060F4;
+	color: white;
+}
+
+a, a:hover {
+	color: white;
+}
+
+.flex-container {
+	min-height: 100%;
+	min-height: 100vh;	
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	flex-direction: column;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-align-items: center;
+	align-items: center;
+	text-align: center;
+}
+
+.input-group {
+	width: 25%;
+	margin: 1em auto;
 }
