@@ -3,6 +3,7 @@ $(document).ready(function() {
 		event.preventDefault();
 		var searchTerm = $("input:first").val();
 		console.log("searched for:", searchTerm);
+		$("input:first").val("");
 		$.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + searchTerm + "&callback=?", function(data) {
 			console.log(data.query.search);
 			$(".searchOutput").html("");
