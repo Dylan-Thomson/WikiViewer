@@ -33,6 +33,7 @@ a:hover .article{
 
 .article {
 	border-left: 5px solid transparent;
+	border-radius: 0px 15px 15px 0px;
 	background: rgba(55,55,55,.5);
 	margin: 1em auto;
 	text-align: left;
