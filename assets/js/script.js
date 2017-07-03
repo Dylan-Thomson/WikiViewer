@@ -8,19 +8,15 @@ $(document).ready(function() {
 		$("input:first").val("");
 
 		// Make API request using search value
-		$.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&list=search&srsearch=" + searchTerm + "&callback=?", function(data) {
-			console.log(data.query.search);
-
+		$.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&list=&generator=search&exintro=1&exsectionformat=plain&gsrsearch=" + searchTerm + "&callback=?", function(data) {
 			// Update/clear output
-			$(".searchKeyOutput").html("").html(data.query.search.length + " results for: " + searchTerm);
+			$(".searchKeyOutput").html("").html("Results for: " + searchTerm);
 			$(".searchOutput").html("");
 
 			// Display each article
-			data.query.search.forEach(function(article) {
-				var title = article.title;
-				var url = "https://en.wikipedia.org/wiki/" + title;
-				var snippet = article.snippet;
-				$(".searchOutput").append("<a href='" + url + "' target='_blank'><div class='article'><h2>" + title + "</h2>" + snippet + "</div></a>");	
+			$.each(data.query.pages, function(key, value) {
+				var url = "https://en.wikipedia.org/wiki/" + value.title;
+				$(".searchOutput").append("<a href='" + url + "' target='_blank'><div class='article'><h2>" + value.title + "</h2>" + value.extract + "</div></a>");	
 			});
 		});	
 	});
