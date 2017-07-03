@@ -3,7 +3,7 @@ body {
 	color: white;
 }
 
-a, a:hover, a:active {
+a:link, a:visited, a:hover, a:active {
 	color: white;
 	text-decoration: none;
 }
