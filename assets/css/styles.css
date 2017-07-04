@@ -3,7 +3,7 @@ body {
 	color: white;
 }
 
-a:link, a:visited, a:hover, a:active {
+.searchOutput a:link, .searchOutput a:visited, .searchOutput a:hover, .searchOutput a:active {
 	color: white;
 	text-decoration: none;
 }
@@ -43,4 +43,8 @@ a:hover .article{
 .searchOutput {
 	width: 60%;
 	margin: auto;
+}
+
+#randomArticle:link, #randomArticle:visited, #randomArticle:hover, #randomArticle:active {
+	color: white;
 }
