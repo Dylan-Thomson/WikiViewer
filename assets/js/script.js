@@ -19,9 +19,7 @@ $(document).ready(function() {
 				var url = "https://en.wikipedia.org/wiki/" + value.title;
 				$(".searchOutput").append("<a href='" + url + "' target='_blank'><div class='article'><h2>" + value.title + "</h2>" + value.extract + "</div></a>");	
 			});
-			$(".searchOutput").hide().fadeIn("slow", function() {
-
-			});
+			$(".searchOutput").hide().slideDown(1500);
 		});	
 	});
 });
