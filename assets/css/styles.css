@@ -77,8 +77,16 @@ a:hover .article{
 	text-transform: uppercase;
 }
 
+#searchInput {
+	border-radius: 25px;
+}
+
 #searchInput:focus {
 	border: 2px solid red;
+}
+
+#searchButton {
+	border-radius: 25px;
 }
 
 #searchButton:hover, #searchButton:active, #searchButton.active, #searchButton:focus, #searchButton.focus, #searchButton:active:hover, #searchButton.active:hover {
