@@ -68,6 +68,9 @@ a:hover .article{
 
 #randomArticle:link, #randomArticle:visited, #randomArticle:hover, #randomArticle:active {
 	color: red;
+	font-family: 'Molengo', sans-serif;
+	/*font-size: 1.5em;*/
+	text-transform: uppercase;
 }
 
 @media (max-width: 766px) {
