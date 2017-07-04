@@ -7,6 +7,7 @@ $(document).ready(function() {
 		var searchTerm = $("input:first").val();
 		$("input:first").val("");
 
+
 		// Make API request using search value
 		$.getJSON("https://en.wikipedia.org/w/api.php?action=query&format=json&prop=extracts&list=&generator=search&exintro=1&exsectionformat=plain&gsrsearch=" + searchTerm + "&callback=?", function(data) {
 			// Update/clear output
@@ -17,6 +18,9 @@ $(document).ready(function() {
 			$.each(data.query.pages, function(key, value) {
 				var url = "https://en.wikipedia.org/wiki/" + value.title;
 				$(".searchOutput").append("<a href='" + url + "' target='_blank'><div class='article'><h2>" + value.title + "</h2>" + value.extract + "</div></a>");	
+			});
+			$(".searchOutput").hide().fadeIn("slow", function() {
+
 			});
 		});	
 	});
