@@ -1,6 +1,27 @@
 body {
-	background: #2060F4;
-	color: white;
+	background: #EDE7E1;
+	background-image: url('../../assets/images/ep_naturalwhite.png');
+	font-family: 'Lekton', sans-serif;
+}
+
+form {
+	margin: 1em auto;
+}
+
+h1 {
+	font-size: 4em;
+}
+
+h1, h2 {
+	font-family: 'Molengo', sans-serif;
+}
+
+h2 {
+	margin: none;
+}
+
+a:hover .article{
+	border-left: 5px solid #FF0000;
 }
 
 .searchOutput a:link, .searchOutput a:visited, .searchOutput a:hover, .searchOutput a:active {
@@ -8,8 +29,8 @@ body {
 	text-decoration: none;
 }
 
-a:hover .article{
-	border-left: 5px solid #FFAD08;
+.searchOutput {
+	color: white;
 }
 
 .flex-container {
@@ -33,7 +54,7 @@ a:hover .article{
 
 .article {
 	border-left: 5px solid transparent;
-	border-radius: 0px 15px 15px 0px;
+	border-radius: 0px 25px 25px 0px;
 	background: rgba(55,55,55,.5);
 	margin: 1em auto;
 	text-align: left;
@@ -46,5 +67,5 @@ a:hover .article{
 }
 
 #randomArticle:link, #randomArticle:visited, #randomArticle:hover, #randomArticle:active {
-	color: white;
+	color: red;
 }
