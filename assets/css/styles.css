@@ -96,7 +96,7 @@ a:hover .article{
   outline: none;
 }
 
-@media (max-width: 766px) {
+@media handheld {
 	.searchOutput {
 		width: 95%;
 	}
