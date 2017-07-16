@@ -29,6 +29,8 @@ a:hover .article{
 	border-left: 5px solid #FF0000;
 }
 
+
+
 .searchOutput a:link, .searchOutput a:visited, .searchOutput a:hover, .searchOutput a:active {
 	color: white;
 	text-decoration: none;
@@ -96,7 +98,13 @@ a:hover .article{
   outline: none;
 }
 
-@media handheld {
+@media (max-width: 767px) {
+	.searchOutput {
+		width: 95%;
+	}
+}
+
+@media(min-width: 767px) and (max-width: 1366px) {
 	.searchOutput {
 		width: 95%;
 	}
